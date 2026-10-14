@@ -1,0 +1,58 @@
+return {
+  { import = "lazyvim.plugins.extras.lang.python" },
+  { import = "lazyvim.plugins.extras.lang.typescript" },
+  { import = "lazyvim.plugins.extras.lang.json" },
+  { import = "lazyvim.plugins.extras.lang.yaml" },
+  { import = "lazyvim.plugins.extras.lang.markdown" },
+  { import = "lazyvim.plugins.extras.lang.toml" },
+  { import = "lazyvim.plugins.extras.lang.docker" },
+  { import = "lazyvim.plugins.extras.lang.go" },
+  { import = "lazyvim.plugins.extras.lang.rust" },
+  { import = "lazyvim.plugins.extras.lang.clangd" },
+  { import = "lazyvim.plugins.extras.lang.tailwind" },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        bashls = {},
+        cssls = {},
+        html = {},
+        lua_ls = {
+          settings = {
+            Lua = {
+              completion = {
+                callSnippet = "Replace",
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  {
+    "mason-org/mason.nvim",
+    opts = function(_, opts)
+      opts.ensure_installed = opts.ensure_installed or {}
+      vim.list_extend(opts.ensure_installed, {
+        "bash-language-server",
+        "clangd",
+        "css-lsp",
+        "docker-compose-language-service",
+        "dockerfile-language-server",
+        "gopls",
+        "hadolint",
+        "html-lsp",
+        "json-lsp",
+        "lua-language-server",
+        "marksman",
+        "pyright",
+        "rust-analyzer",
+        "ruff",
+        "taplo",
+        "tailwindcss-language-server",
+        "vtsls",
+        "yaml-language-server",
+      })
+    end,
+  },
+}

@@ -1,0 +1,12 @@
+.DS_Store
+*.swp
+*.swo
+*.log
+**/.env
+**/.env.*
+**/node_modules/
+**/__pycache__/
+**/.cache/
+**/.local/
+fish/.config/fish/fish_variables
+*.bak*
