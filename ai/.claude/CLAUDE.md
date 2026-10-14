@@ -1,1 +1,0 @@
-../.config/ai/AI_WORK_RULES.md

@@ -10,3 +10,7 @@
 **/.local/
 fish/.config/fish/fish_variables
 *.bak*
+fish/.config/fish/conf.d/local.fish
+fish/.config/fish/functions/claude.fish
+fish/.config/fish/functions/claude-max.fish
+ai/
