@@ -44,5 +44,7 @@ fi
 export STARSHIP_CONFIG=~/.config/starship.toml
 command -v starship &>/dev/null && eval "$(starship init bash)"
 
+# Rust（rustup），沒裝就跳過
+[[ -f ~/.cargo/env ]] && source ~/.cargo/env
+
 [[ ${BLE_VERSION-} ]] && ble-attach
-. "$HOME/.cargo/env"
